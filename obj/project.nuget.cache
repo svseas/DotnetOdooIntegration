@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "wsWf5QPup1YildDqD+FTtUQiln0yA6mwKKmXBCWTSfLSMTgf/Uc4VqNdJ5R8w+NyikG71plAWY8cSCCiUT4iJA==",
+  "success": true,
+  "projectFilePath": "/home/truong/RiderProjects/OdooIntergration/OdooIntergration.csproj",
+  "expectedPackageFiles": [
+    "/home/truong/.nuget/packages/microsoft.extensions.dependencyinjection/7.0.0/microsoft.extensions.dependencyinjection.7.0.0.nupkg.sha512",
+    "/home/truong/.nuget/packages/microsoft.extensions.dependencyinjection.abstractions/7.0.0/microsoft.extensions.dependencyinjection.abstractions.7.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}
