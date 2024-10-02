@@ -1,7 +1,7 @@
 {
   "version": 3,
   "targets": {
-    "net7.0": {
+    "net8.0": {
       "Microsoft.Extensions.DependencyInjection/7.0.0": {
         "type": "package",
         "dependencies": {
@@ -35,6 +35,15 @@
         },
         "build": {
           "buildTransitive/net6.0/_._": {}
+        }
+      },
+      "xmlrpcnet/3.0.0.266": {
+        "type": "package",
+        "compile": {
+          "lib/net20/CookComputing.XmlRpcV2.dll": {}
+        },
+        "runtime": {
+          "lib/net20/CookComputing.XmlRpcV2.dll": {}
         }
       }
     }
@@ -97,37 +106,52 @@
         "microsoft.extensions.dependencyinjection.abstractions.nuspec",
         "useSharedDesignerContext.txt"
       ]
+    },
+    "xmlrpcnet/3.0.0.266": {
+      "sha512": "Tlsc1k2M7+47zjlxFH0eJvBw7vOD0DPAs+aEYw4VHU51AAnDypAQlBQdYs5EbOLTzMOTQXW/kCHe6fR5QQrpBg==",
+      "type": "package",
+      "path": "xmlrpcnet/3.0.0.266",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net20/CookComputing.XmlRpcV2.dll",
+        "lib/sl3-wp/CookComputing.XmlRpcPhone.dll",
+        "lib/sl4/CookComputing.XmlRpcSilverlight.dll",
+        "xmlrpcnet.3.0.0.266.nupkg.sha512",
+        "xmlrpcnet.nuspec"
+      ]
     }
   },
   "projectFileDependencyGroups": {
-    "net7.0": [
-      "Microsoft.Extensions.DependencyInjection >= 7.0.0"
+    "net8.0": [
+      "Microsoft.Extensions.DependencyInjection >= 7.0.0",
+      "xmlrpcnet >= 3.0.0.266"
     ]
   },
   "packageFolders": {
-    "/home/truong/.nuget/packages/": {}
+    "/Users/joetang/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/truong/RiderProjects/OdooIntergration/OdooIntergration.csproj",
+      "projectUniqueName": "/Users/joetang/Projects/DotnetOdooIntegration/OdooIntergration.csproj",
       "projectName": "OdooIntergration",
-      "projectPath": "/home/truong/RiderProjects/OdooIntergration/OdooIntergration.csproj",
-      "packagesPath": "/home/truong/.nuget/packages/",
-      "outputPath": "/home/truong/RiderProjects/OdooIntergration/obj/",
+      "projectPath": "/Users/joetang/Projects/DotnetOdooIntegration/OdooIntergration.csproj",
+      "packagesPath": "/Users/joetang/.nuget/packages/",
+      "outputPath": "/Users/joetang/Projects/DotnetOdooIntegration/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/home/truong/.nuget/NuGet/NuGet.Config"
+        "/Users/joetang/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
-        "net7.0"
+        "net8.0"
       ],
       "sources": {
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
-        "net7.0": {
-          "targetAlias": "net7.0",
+        "net8.0": {
+          "targetAlias": "net8.0",
           "projectReferences": {}
         }
       },
@@ -135,15 +159,24 @@
         "warnAsError": [
           "NU1605"
         ]
+      },
+      "restoreAuditProperties": {
+        "enableAudit": "true",
+        "auditLevel": "low",
+        "auditMode": "direct"
       }
     },
     "frameworks": {
-      "net7.0": {
-        "targetAlias": "net7.0",
+      "net8.0": {
+        "targetAlias": "net8.0",
         "dependencies": {
           "Microsoft.Extensions.DependencyInjection": {
             "target": "Package",
             "version": "[7.0.0, )"
+          },
+          "xmlrpcnet": {
+            "target": "Package",
+            "version": "[3.0.0.266, )"
           }
         },
         "imports": [
@@ -162,8 +195,20 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/home/truong/.dotnet/sdk/7.0.101/RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.203/PortableRuntimeIdentifierGraph.json"
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'xmlrpcnet 3.0.0.266' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net8.0'. This package may not be fully compatible with your project.",
+      "libraryId": "xmlrpcnet",
+      "targetGraphs": [
+        "net8.0"
+      ]
+    }
+  ]
 }

@@ -1,11 +1,23 @@
 {
   "version": 2,
-  "dgSpecHash": "wsWf5QPup1YildDqD+FTtUQiln0yA6mwKKmXBCWTSfLSMTgf/Uc4VqNdJ5R8w+NyikG71plAWY8cSCCiUT4iJA==",
+  "dgSpecHash": "WP+fW2lvC6M1tfaxkmL+U5T3Qr68CqSLYpLRIPZGinbcehH+W8BNwbjPp4iRWhTsV3Ntm9esOTOor9pLSSw/Mw==",
   "success": true,
-  "projectFilePath": "/home/truong/RiderProjects/OdooIntergration/OdooIntergration.csproj",
+  "projectFilePath": "/Users/joetang/Projects/DotnetOdooIntegration/OdooIntergration.csproj",
   "expectedPackageFiles": [
-    "/home/truong/.nuget/packages/microsoft.extensions.dependencyinjection/7.0.0/microsoft.extensions.dependencyinjection.7.0.0.nupkg.sha512",
-    "/home/truong/.nuget/packages/microsoft.extensions.dependencyinjection.abstractions/7.0.0/microsoft.extensions.dependencyinjection.abstractions.7.0.0.nupkg.sha512"
+    "/Users/joetang/.nuget/packages/microsoft.extensions.dependencyinjection/7.0.0/microsoft.extensions.dependencyinjection.7.0.0.nupkg.sha512",
+    "/Users/joetang/.nuget/packages/microsoft.extensions.dependencyinjection.abstractions/7.0.0/microsoft.extensions.dependencyinjection.abstractions.7.0.0.nupkg.sha512",
+    "/Users/joetang/.nuget/packages/xmlrpcnet/3.0.0.266/xmlrpcnet.3.0.0.266.nupkg.sha512"
   ],
-  "logs": []
+  "logs": [
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'xmlrpcnet 3.0.0.266' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net8.0'. This package may not be fully compatible with your project.",
+      "libraryId": "xmlrpcnet",
+      "targetGraphs": [
+        "net8.0"
+      ]
+    }
+  ]
 }
