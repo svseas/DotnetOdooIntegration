@@ -17,35 +17,35 @@ namespace OdooIntegration.Repositories
             _odooService = odooService;
         }
 
-        public int Create(TEntity entity)
+        public async Task<int> Create(TEntity entity)
         {
             Dictionary<string, object> values = ConvertEntityToDictionary(entity);
-            return _odooService.CreateRecord(_modelName, values);
+            return await _odooService.CreateRecord(_modelName, values);
         }
 
-        public TEntity GetById(int id)
+        public async Task<TEntity> GetById(int id)
         {
             string[] fields = GetEntityFields();
-            var record = _odooService.ReadRecord(_modelName, id, fields);
+            var record = await _odooService.ReadRecord(_modelName, id, fields);
             return ConvertDictionaryToEntity(record);
         }
 
-        public IEnumerable<TEntity> Search(object[] domain)
+        public async Task<IEnumerable<TEntity>> Search(object[] domain)
         {
             string[] fields = GetEntityFields();
-            var records = _odooService.SearchRead(_modelName, domain, fields);
+            var records = await _odooService.SearchRead(_modelName, domain, fields);
             return records.Select(ConvertDictionaryToEntity);
         }
 
-        public void Update(int id, TEntity entity)
+        public async Task Update(int id, TEntity entity)
         {
             Dictionary<string, object> values = ConvertEntityToDictionary(entity);
-            _odooService.UpdateRecord(_modelName, id, values);
+            await _odooService.UpdateRecord(_modelName, id, values);
         }
 
-        public void Delete(int id)
+        public async Task Delete(int id)
         {
-            _odooService.DeleteRecord(_modelName, id);
+            await _odooService.DeleteRecord(_modelName, id);
         }
 
         private Dictionary<string, object> ConvertEntityToDictionary(TEntity entity)
@@ -78,5 +78,17 @@ namespace OdooIntegration.Repositories
                 .Select(p => p.Name)
                 .ToArray();
         }
+
+        public async Task<bool> TestConnection()
+        {
+            return await _odooService.TestConnection();
+        }
+
+        public async Task<Dictionary<string, object>> GetUserInfo()
+        {
+            return await _odooService.GetUserInfo();
+        }
+
+        
     }
 }
